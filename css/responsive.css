@@ -77,6 +77,16 @@
     border-top: 1px solid #eee;
 }
 
+/* Teaser Modal */
+
+.teaser-modal-content {
+    flex-direction: column;
+}
+
+.teaser-modal {
+    margin: 32px;
+}
+
 
 }
 

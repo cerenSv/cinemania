@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,13 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo">
@@ -32,14 +36,17 @@
             </button>
         </div>
     </nav>
-<header>
-     <div class="hero-section">
-        <div class="hero-content-wrapper">
-            <h1>Let's Make Your Own Cinema</h1>
-            <p>Is a guide to creating a personalized movie theater experience. You'll need a projector, screen, and speakers. Decorate your space, choose your films, and stock up on snacks for the full experience.</p>
-            <button>Get Started</button>
+    <header>
+        <div class="hero-section">
+            <img src="img/picture.jpg" alt="">
+            <div class="hero-content-wrapper">
+                <h1>Let's Make Your Own Cinema</h1>
+                <p>Is a guide to creating a personalized movie theater experience. You'll need a projector, screen, and
+                    speakers. Decorate your space, choose your films, and stock up on snacks for the full experience.
+                </p>
+                <button class="teaser-button">Get Started</button>
+            </div>
         </div>
-     </div>
     </header>
 
     <div class="section">
@@ -47,14 +54,17 @@
             <h2>Weekly Trends</h2>
             <a href="#">See all</a>
         </div>
-        <div class="row-3">
+        <div class="row-3" id="movie-container">
             <div class="movie-card">
-                <img src="./img/ghosted.jpg" alt="Ghosted">
+                <img class="movie-image" src="" alt="">
                 <div class="movie-card-info">
                     <div class="card-info-align">
                         <a href="#!" class="movie-card-content">
-                            <h3>Ghosted</h3>
-                            <p>Drama, Action | 2023</p>
+                            <h3 class="movie-title"></h3>
+                            <div>
+                                <span class="genre"></span> |
+                                <span class="year"></span>
+                            </div>
                         </a>
                         <div class="card-rating">
                             <img src="img/rating/star-full.png" alt="">
@@ -66,13 +76,17 @@
                     </div>
                 </div>
             </div>
+
             <div class="movie-card">
-                <img src="./img/QUANTUMANIA.jpg" alt="Quantumania">
+                <img class="movie-image" src="" alt="">
                 <div class="movie-card-info">
                     <div class="card-info-align">
                         <a href="#!" class="movie-card-content">
-                            <h3>Quantumania</h3>
-                            <p>Drama, Action | 2023</p>
+                            <h3 class="movie-title"></h3>
+                            <div>
+                                <span class="genre"></span> |
+                                <span class="year"></span>
+                            </div>
                         </a>
                         <div class="card-rating">
                             <img src="img/rating/star-full.png" alt="">
@@ -85,12 +99,15 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="./img/EVILDEADRISE.jpg" alt="Evil Dead Rise">
+                <img class="movie-image" src="" alt="">
                 <div class="movie-card-info">
                     <div class="card-info-align">
                         <a href="#!" class="movie-card-content">
-                            <h3>Evil Dead Rise</h3>
-                            <p>Drama, Comedy | 2023</p>
+                            <h3 class="movie-title"></h3>
+                            <div>
+                                <span class="genre"></span> |
+                                <span class="year"></span>
+                            </div>
                         </a>
                         <div class="card-rating">
                             <img src="img/rating/star-full.png" alt="">
@@ -137,7 +154,11 @@
                 </ul>
                 <h6>ABOUT</h6>
                 <p>
-                    Reclusive author Loretta Sage writes about exotic places in her popular adventure novels that feature a handsome cover model named Alan. While on tour promoting her new book with Alan, Loretta gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city's lost treasure from her latest story. Determined to prove he can be a hero in real life and not just on the pages of her books, Alan sets off to rescue her.
+                    Reclusive author Loretta Sage writes about exotic places in her popular adventure novels that
+                    feature a handsome cover model named Alan. While on tour promoting her new book with Alan, Loretta
+                    gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city's lost
+                    treasure from her latest story. Determined to prove he can be a hero in real life and not just on
+                    the pages of her books, Alan sets off to rescue her.
                 </p>
                 <button>Add to my library</button>
             </div>
@@ -148,9 +169,38 @@
         <p>© 2023 | All Rights Reserved | Developed with ❤️ by Sci-Fi Students</p>
     </footer>
 
+    <!-- Teaser Modal -->
+    <div class="teaser-modal-bg">
+        <div class="teaser-modal">
+            <div class="modal-header">
+                <span class="close-modal">X</span>
+            </div>
+            <div class="teaser-modal-content">
+                <h5>
+                    OOPS... <br>
+                    We are very sorry! <br>
+                    But we couldn't find the trailer.
+                </h5>
+                <img src="img/oops.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- movie detail modal -->
+    <div id="teaser-modal-bg" class="teaser-modal-bg">
+        <div class="modal-header">
+            <img id="modal-image" src="" alt="Film Poster">
+            <h3 id="modal-title"></h3>
+            <p id="modal-genre"></p>
+            <p id="modal-overview"></p>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
 
 </body>
+
 </html>
